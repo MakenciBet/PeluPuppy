@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Update from "./pages/Update";
 
+
 import Favoritos from "./pages/Favoritos";
 import Profile from "./pages/Profile";
 
