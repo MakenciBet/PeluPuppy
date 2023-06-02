@@ -12,7 +12,8 @@ const ProductCard = ({ product}) => {
     <h2>{product.title}</h2>
     <img src={product.img} alt="" />
     <p>{product.description}</p>
-    <button>Comprar</button>
+    <p>Precio: {product.price}</p>
+    <button>Comprar</button>  
     <button onClick={() => addFavorites(product) } disabled={ favorites.some(item => item.id === product.id)}> favorito </button>
   </article>
   );

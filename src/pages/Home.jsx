@@ -35,7 +35,7 @@ const Home = () => {
               product.title.toLowerCase().includes(searchText.toLowerCase())
             )
             .map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} product= {{ ...product, price: product.price }}/>
             ))}
         </div>
       </div>
