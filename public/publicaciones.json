@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Colitas Felices",
+    "user": "User Test",
+    "description": "Haz brillar la personalidad de tu mascota en nunestra peluquería canina y felina de nivel boutoque. En nuestra tienda, encontrarás todo lo que necesitas para el bienestar de tu perro o gato. Nos tomamos el tiempo necesario para atender a tu perrito. Además, usamos productos de alta gama, para alcanzar mejores resultados.",
+    "price": "$35.000",
+    "img": "https://lh3.googleusercontent.com/p/AF1QipNxKQywuQmFcuewCJSSdGj64WdZB2gehxGHilEq=s680-w680-h510"
+  },
+  {
+    "id": 2,
+    "title": "Pets way",
+    "user": "Claudio",
+    "description": "Somos una peluqueria para caniona, dedicada con mucho amor y entrega para nuestros regalones",
+    "price": "$38.000",
+    "img": "https://scontent.flsc1-1.fna.fbcdn.net/v/t39.30808-6/290563383_506316237926266_3270611037392706782_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeGPJDQO2q1gLPfq3G6_ZuN4Th5r2eYAr5hOHmvZ5gCvmHAySguEL8S07aAnxdKMRtw&_nc_ohc=49_mVHsseqcAX8ADVOj&_nc_ht=scontent.flsc1-1.fna&oh=00_AfCYsj32bJuJraq52qzhFuHkhSpJuwJVbOjbEw7F_M4BVQ&oe=647CAB81"
+  },
+  {
+    "id": 3,
+    "title": "Terra Animal",
+    "user": "Evelyn Venegas",
+    "description": "Una experiencia diferente para nuestros regalones. Realizamos baños sanitarios, baños dermatológicos, baños cosméticos, cortes de raza y corte de uñas. Peluqueria, ubicada en Av. Guillermo Ulriksen, especial para tu mascota.",
+    "price": "$25.000",
+    "img": "https://lh3.googleusercontent.com/p/AF1QipMTpV22TD1nM-5rNDpJbwCvhuGzQVBLH_jbpseu=s680-w680-h510"
+  },
+  {
+    "id": 4,
+    "title": "Pet´s Fans",
+    "user": "test@test.com",
+    "description": "Algunos de los servicios que se ofrecen en la peluquería canina PertsFans son: baño y secado, corte de pelo y uñas, limpieza de oídos, entre otros. Es importante que los dueños de los perros lleven a sus mascotas a una peluquería canina regularmente para evitar enfermedades en la piel y en los oídos. Además, los perros que se ven y se sienten bien, tienen un comportamiento más positivo y son más felices. En nuestra peluquería canina, también podrás encontrar otros servicios adicionales como la venta de accesorios, alimentos, juguetes y productos de higiene. ",
+    "price": "$200.000",
+    "img": "https://www.petsfans.cl/wp-content/uploads/2023/05/cropped-PETS_FANS_LOGOTIPO-FINAL-1488x1536.png"
+  },
+  {
+    "id": 5,
+    "title": "Rancho Pet",
+    "user": "Javiera Gonzalez",
+    "description": "En nuestra peluquería ofrecemos: baño, corte de pelo según la raza de tu peludo, desparasitamos. Ven deja a tu mascota en las mejores manos. Estamos ubicados en la esquina de Av. Guillermo Ulriksen con 4 esquinas. Los esperamos. ",
+    "price": "$40.000",
+    "img": "https://scontent.flsc1-1.fna.fbcdn.net/v/t31.18172-8/15585075_1050184521770305_8210683136711121858_o.png?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFsZHqiU4yOfeg3o5YE3YmYWWpYVugUTdxZalhW6BRN3HLQe7fZZBvn5pHgxe1rvDE&_nc_ohc=WA0foEnQOmoAX8KhZlQ&_nc_ht=scontent.flsc1-1.fna&oh=00_AfDm2cgjA6S_1QqppeuI0YfYmlTkWe_1KynVxrHFdayl_w&oe=649F372E"
+  }
+]
