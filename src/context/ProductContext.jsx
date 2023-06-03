@@ -50,11 +50,11 @@ const ProductProvider = ({ children }) => {
     getPelus();
   }, []);
 
-  const [carrito, setCarrito] = useState([
-    
-  ]);
+  const [carrito, setCarrito] = useState([]);
 
   const addPeluqueria = (peluqueria) => {
+
+    const findID = carrito.find(item => peluqueria.id === item.id)
     setCarrito([...carrito, peluqueria]);
   };
 
