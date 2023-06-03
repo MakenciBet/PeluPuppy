@@ -7,7 +7,7 @@ import "../components/Navbar.css";
 const Navbar = () => {
   const { user, logout } = useContext(UserContext);
   const { favorites } = useContext(FavoritosContext);
-
+  
   return (
     <nav className="navbar-container">
       <ul className="navbar-list">
@@ -38,7 +38,12 @@ const Navbar = () => {
                 Favoritos <span className="favorites-count">{favorites.length}</span>
               </NavLink>
             </li>
-        
+            <li>
+              <NavLink to="/carrito" role="button" className="navbar-link">
+                Carrito
+              </NavLink>
+            </li>
+           
             <li>
               <button role="button" className="logout-button" onClick={logout}>
                 Cerrar Sesión

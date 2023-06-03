@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
-import { ProductContext } from "../context/ProductContext";
+import { ProductContext, useProductContext } from "../context/ProductContext";
 import "../pages/Home.css"; 
 import ProductCard from "../components/ProductCard";
 
 const Home = () => {
   const { products } = useContext(ProductContext);
   const [searchText, setSearchText] = useState('');
+ // const data = useProductContext();
+  // console.log(data);
 
   return (
     <div className="home-container">
@@ -35,7 +37,7 @@ const Home = () => {
               product.title.toLowerCase().includes(searchText.toLowerCase())
             )
             .map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} product= {{ ...product, price: product.price }}/>
             ))}
         </div>
       </div>

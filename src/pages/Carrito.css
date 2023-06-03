@@ -1,0 +1,42 @@
+.carrito-container {
+    max-width: 500px; /* Limita el ancho máximo del contenedor del carrito */
+    margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
+    padding: 20px;
+  }
+  
+  .item-list {
+    display: grid;
+    grid-gap: 10px;
+  }
+  
+  .item {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .item h2 {
+    font-size: 16px;
+  }
+  
+  .item-price {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .quantity-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-button {
+    font-size: 14px;
+    padding: 5px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .item-quantity {
+    margin: 0 10px;
+  }
+  

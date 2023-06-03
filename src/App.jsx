@@ -15,6 +15,7 @@ import Favoritos from "./pages/Favoritos";
 import Profile from "./pages/Profile";
 
 import Navbar from "./components/Navbar";
+import Carrito from './pages/Carrito';
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" /> } />
         <Route path="/favoritos" element={user ? <Favoritos /> : <Navigate to="/login" /> } />
         <Route path="/profile" element={user ? <Profile /> : <Navigate to="/login" /> } />
+        <Route path="/carrito" element={user ? <Carrito /> : <Navigate to="/login" />} />
         <Route path="/update/:id" element={user ? <Update /> : <Navigate to="/login" /> } />
       </Routes>
 
