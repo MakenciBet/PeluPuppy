@@ -34,7 +34,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <h1 className="dashboard-title">Bienvenid@: {user.name}</h1>
-      <h2 className="dashboard-subtitle">guau guau</h2>
+      <h2 className="dashboard-subtitle">Recuerda que aqui puedes agregar una peluqueria o servicios para nuestras mascotas, sólo debes llenar el formulario.</h2>
       <form onSubmit={handleSubmit} className="dashboard-form">
         <div className="form-group">
           <input

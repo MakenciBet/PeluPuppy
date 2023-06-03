@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +19,21 @@ const Register = () => {
     e.preventDefault();
 
     if (password !== repassword) {
-      return alert("Las contraseñas no coinciden");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Las contraseñas no coinciden',
+      });
+      return;
+    }
+
+    if (password.length < 5) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'La contraseña debe tener al menos 5 caracteres',
+      });
+      return;
     }
 
     const userExists = register({
@@ -31,14 +45,15 @@ const Register = () => {
     });
 
     if (userExists) {
-      return Swal.fire({
+      Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'El correo electrónico ya está registrado',
       });
+      return;
     }
 
-    navigate.push("/dashboard");
+    navigate("/profile");
   };
 
   return (
@@ -52,6 +67,7 @@ const Register = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="form-control"
+            required
           />
         </div>
         <div className="form-group">
@@ -61,6 +77,7 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="form-control"
+            required
           />
         </div>
         <div className="form-group">
@@ -70,6 +87,7 @@ const Register = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className="form-control"
+            required
           />
         </div>
         <div className="form-group">
@@ -79,6 +97,7 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="form-control"
+            required
           />
         </div>
         <div className="form-group">
@@ -88,6 +107,7 @@ const Register = () => {
             value={repassword}
             onChange={(e) => setRepassword(e.target.value)}
             className="form-control"
+            required
           />
         </div>
         <button type="submit" className="btn-register">

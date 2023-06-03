@@ -1,7 +1,6 @@
 .carrito-container {
-    max-width: 500px; /* Limita el ancho máximo del contenedor del carrito */
-    margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
-    padding: 20px;
+    max-width: 5000px; 
+    padding: 10px;
   }
   
   .item-list {
@@ -40,3 +39,8 @@
     margin: 0 10px;
   }
   
+  .subtitulo {
+    font-size: 20px;
+    color: grey
+
+  }

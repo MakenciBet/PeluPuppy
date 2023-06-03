@@ -76,7 +76,7 @@ const Login = () => {
         classNames="error-transition"
         unmountOnExit
       >
-        <div className="error-message">Please provide a valid email.</div>
+        <div className="error-message">Porfavor de un correo electronico válido</div>
       </CSSTransition>
     </div>
   );

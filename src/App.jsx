@@ -27,7 +27,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={!user ? <Login /> : <Navigate to="/dashboard" /> }/>
-        <Route path="/register" element={!user ? <Register /> : <Navigate to="/dashboard" />} />
+        <Route path="/register" element={!user ? <Register /> : <Navigate to="/login" />} />
         <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" /> } />
         <Route path="/favoritos" element={user ? <Favoritos /> : <Navigate to="/login" /> } />
         <Route path="/profile" element={user ? <Profile /> : <Navigate to="/login" /> } />

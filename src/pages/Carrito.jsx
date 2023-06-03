@@ -7,7 +7,10 @@ const Carrito = () => {
 
   return (
     <div className="carrito-container">
-      <h1>Carrito</h1>
+      <div className="titulo-container">
+        <h1 className="titulo">Carrito de compras</h1>
+      </div>
+      <h2 className="subtitulo">Recuerda que comprando tu servicio a través de nuestra página, estás pagando un 10% menos que directo en el local.</h2>
       <div className="item-list">
         {carrito.map((item) => (
           <div key={item.id} className="item">

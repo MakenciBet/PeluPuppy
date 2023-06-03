@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { FavoritosContext } from "../context/FavoritoContext";
 import { useNavigate } from "react-router-dom";
@@ -5,6 +6,7 @@ import { useProductContext } from "../context/ProductContext";
 import Swal from "sweetalert2";
 
 const ProductCard = ({ product }) => {
+  
   const { addFavorites, favorites } = useContext(FavoritosContext);
   const { peluqueria, addPeluqueria } = useProductContext();
   const navigate = useNavigate();
