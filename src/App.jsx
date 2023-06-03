@@ -9,14 +9,12 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Update from "./pages/Update";
-
-
 import Favoritos from "./pages/Favoritos";
 import Profile from "./pages/Profile";
-
-import Navbar from "./components/Navbar";
 import Carrito from './pages/Carrito';
 
+import Navbar from "./components/Navbar";
+import Footer from './components/Footer';
 
 const App = () => {
   const {user} = useContext(UserContext);
@@ -37,7 +35,7 @@ const App = () => {
         <Route path="/update/:id" element={user ? <Update /> : <Navigate to="/login" /> } />
       </Routes>
 
-      { /*footer */ }
+      <Footer />
     </div>
   );
 };

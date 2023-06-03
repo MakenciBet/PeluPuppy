@@ -1,5 +1,5 @@
 import { useProductContext } from "../context/ProductContext";
-import "../pages/Carrito.css"; // Importa un archivo CSS personalizado para los estilos del carrito
+import "../pages/Carrito.css"; 
 
 const Carrito = () => {
   const { carrito, sumaTotalPeluquerias } = useProductContext();
@@ -14,9 +14,7 @@ const Carrito = () => {
             <h2>{item.title}</h2>
             <p className="item-price">${item.cantidad * item.price}</p>
             <div className="quantity-container">
-              <button className="quantity-button">-</button>
               <p className="item-quantity">{item.cantidad}</p>
-              <button className="quantity-button">+</button>
             </div>
           </div>
         ))}

@@ -37,7 +37,7 @@ const ProductProvider = ({ children }) => {
   };
 
   // esto es nuevo:
-  //const carrito = ["1", "2", "3"]
+  
   const [peluquerias, setPeluquerias] = useState([]);
 
   const getPelus = async () => {
