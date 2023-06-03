@@ -11,6 +11,8 @@ const Favorites = () => {
       favorites.map(item => (
         <article key={item.id}>
           <p>{item.title}</p>
+          <p>{item.price}</p>
+          
           <button onClick={() => deleteFavorites(item.id)} >Eliminar</button>
         </article>
       ))
