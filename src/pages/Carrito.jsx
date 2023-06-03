@@ -2,7 +2,7 @@ import { useProductContext } from "../context/ProductContext";
 import "../pages/Carrito.css"; // Importa un archivo CSS personalizado para los estilos del carrito
 
 const Carrito = () => {
-  const { carrito } = useProductContext();
+  const { carrito, sumaTotalPeluquerias } = useProductContext();
   console.log(carrito);
 
   return (
@@ -12,15 +12,16 @@ const Carrito = () => {
         {carrito.map((item) => (
           <div key={item.id} className="item">
             <h2>{item.title}</h2>
-            <p className="item-price">${item.price}</p>
+            <p className="item-price">${item.cantidad * item.price}</p>
             <div className="quantity-container">
               <button className="quantity-button">-</button>
-              <p className="item-quantity">8</p>
+              <p className="item-quantity">{item.cantidad}</p>
               <button className="quantity-button">+</button>
             </div>
           </div>
         ))}
       </div>
+      <h2>Total: {sumaTotalPeluquerias}</h2>
     </div>
   );
 };

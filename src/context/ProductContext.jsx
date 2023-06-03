@@ -53,10 +53,24 @@ const ProductProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
 
   const addPeluqueria = (peluqueria) => {
+    const findID = carrito.find((item) => peluqueria.id === item.id);
 
-    const findID = carrito.find(item => peluqueria.id === item.id)
-    setCarrito([...carrito, peluqueria]);
+    if (findID) {
+      const newPeluquerias = carrito.map((item) =>
+        item.id === findID.id
+          ? { ...findID, cantidad: findID.cantidad + 1 }
+          : item
+      );
+
+      return setCarrito(newPeluquerias);
+    }
+
+    setCarrito([...carrito, { ...peluqueria, cantidad: 1 }]);
   };
+
+  const sumaTotalPeluquerias = carrito.reduce(
+    (acc, item) => item.price * item.cantidad + acc , 0
+  )
 
   return (
     <ProductContext.Provider
@@ -68,6 +82,7 @@ const ProductProvider = ({ children }) => {
         peluquerias,
         carrito,
         addPeluqueria,
+        sumaTotalPeluquerias
       }}
     >
       {children}
