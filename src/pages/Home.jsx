@@ -1,13 +1,30 @@
 import { useContext, useState } from "react";
-import { ProductContext, useProductContext } from "../context/ProductContext";
-import "../pages/Home.css"; 
+import { ProductContext } from "../context/ProductContext";
+import "../pages/Home.css";
 import ProductCard from "../components/ProductCard";
 
 const Home = () => {
   const { products } = useContext(ProductContext);
   const [searchText, setSearchText] = useState('');
- // const data = useProductContext();
-  // console.log(data);
+  const [orden, setOrden] = useState(null);
+
+  const handleOrdenChange = (event) => {
+    setOrden(event.target.value);
+  };
+
+  const filteredProducts = products
+    .filter((product) =>
+      product.title.toLowerCase().includes(searchText.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (orden === "priceAsc") {
+        return a.price - b.price;
+      } else if (orden === "priceDesc") {
+        return b.price - a.price;
+      } else {
+        return 0;
+      }
+    });
 
   return (
     <div className="home-container">
@@ -31,14 +48,18 @@ const Home = () => {
           onChange={(e) => setSearchText(e.target.value)}
           className="search-input"
         />
+        <div className="order-select">
+          <label htmlFor="orden">Ordenar por:</label>
+          <select id="orden" value={orden} onChange={handleOrdenChange}>
+            <option value="">Sin orden</option>
+            <option value="priceAsc">Precio (menor a mayor)</option>
+            <option value="priceDesc">Precio (mayor a menor)</option>
+          </select>
+        </div>
         <div className="product-list">
-          {products
-            .filter((product) =>
-              product.title.toLowerCase().includes(searchText.toLowerCase())
-            )
-            .map((product) => (
-              <ProductCard key={product.id} product= {{ ...product, price: product.price }}/>
-            ))}
+          {filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={{ ...product, price: product.price }} />
+          ))}
         </div>
       </div>
     </div>
